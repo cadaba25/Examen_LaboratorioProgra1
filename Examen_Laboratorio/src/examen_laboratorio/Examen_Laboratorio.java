@@ -22,15 +22,13 @@ public class Examen_Laboratorio {
         
         
         
-        while(opcion != 5){
+        while(opcion != 10){
             System.out.println("--MENU--");
             System.out.println("(1)Piramide");
             System.out.println("(2)Mayor");
             System.out.println("(3)Venta Television");
             System.out.println("(4)Caracteres Vocales");
             System.out.println("(5)Salir");
-        
-        
             System.out.print("=");
             opcion = lea.nextInt();
             
@@ -156,6 +154,48 @@ public class Examen_Laboratorio {
                     System.out.println("Total a pagar (15% impuesto): " + String.format("%.2f", impuesto));
                     
                 
+            }
+            
+            if(opcion == 4){
+                
+                System.out.println("Contador de vocales");
+                    System.out.println("Ingrese una palabra");
+                    String palabra = lea.next();
+                    int lectura = 0;
+                    int contador= 0;
+                    
+                    for(lectura =0; lectura< palabra.length();lectura++){
+                        char vocal = palabra.charAt(lectura);
+                        
+                        switch(vocal){
+                            case 'a':
+                                contador++;
+                            break;    
+                            case 'e':
+                                contador++;
+                            break;    
+                            case 'i':
+                                contador++;
+                            break;    
+                            case 'o':
+                                contador++;
+                            break;    
+                            case 'u':
+                                contador++; 
+                            break;         
+                        }
+                    }
+                    System.out.println("Cantidad de vocales: "+ contador);
+                    
+                    
+            }       
+            
+            if(opcion == 5){
+                System.out.println("HASTA LUEGO");
+                System.out.println(".");
+                System.out.println("...");
+                
+                break;
             }
         }  
     }
